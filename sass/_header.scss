@@ -1,0 +1,54 @@
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 51px;
+    padding: 9px 23px 10px 30px;
+}
+
+.header__logo {
+    max-height: 25px;
+}
+.userData {
+    display: flex;
+    align-items: center;
+    max-height: 51px;
+    white-space: nowrap;
+    & span:hover {
+        text-decoration: underline;
+    }
+    &__icon {
+        width: 32px;
+        height: 32px;
+        background-color: $lightGreyColor;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 11.29px;
+        &:hover {
+            background-color: $userNameColor;
+        }
+        img {
+            position: absolute;
+            top: 22%;
+            left: 30%;
+        }
+    }
+
+    &__name {
+        margin-right: 9.75px;
+        color: $userNameColor;
+        font-size: 10px;
+    }
+
+    &__exit {
+        svg {
+            position: relative;
+            top: -2px;
+            left: 0;
+        }
+        svg:hover .fil0 {
+            fill: black;
+        }
+    }
+}

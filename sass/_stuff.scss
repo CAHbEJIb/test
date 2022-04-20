@@ -1,0 +1,22 @@
+.stuff {
+    height: 48px;
+    background-color: $backStuffColor;
+    padding: 17.59px 27px 17.88px 27px;
+    font-size: 13px;
+    line-height: 13px;
+    &__catalog {
+        color: $stuffCatalogcolor;
+    }
+    name:link,
+    &__name:visited,
+    &__name:hover,
+    &__name:active {
+        color: $stuffNameMail;
+    }
+    .vb {
+        display: none;
+    }
+    .vs {
+        display: none;
+    }
+}

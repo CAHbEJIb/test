@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap);
+$anomalyItemColor: #3e3e3e;
+$borderTableColor: #d1cfd7;
+$AnomalyFColor: #3e3e3e;
+$itemMArk: #ee144e;
+$stuffCatalogcolor: #058dc7;
+$itemProfColor: #808080;
+$titleCatColor: #8d8f93;
+$h2Color: #4d4d4d;
+$disciplineColorGreen: #00983E;
+$borderBodyItemColor: #c6c6c6;
+// : #DFDBDC;
+$yelloSq: #f8d77f;
+$stuffNameMail: #707478;
+$placeholderColor: #999999;
+$itemMArkAlt: #a2a2a2;
+$greenSq: #a6c8b3;
+// : #E30808;
+$borderStatistic: #e4e4e4;
+$searchItemBackColor: #e7e6e1;
+$serchFormBackCol: #f9f8f6;
+$userNameColor: #1b1f24;
+$itemStatusColor: #2dd0c6;
+$textBodyColor: #989898;
+// : #B346BD;
+$lightGreyColor: #c4c4c4;
+$itemStatusColorAlt: #d2154f;
+// : #F31010;
+$bodyBackColor: #f3f2ed;
+$backStuffColor: #f3f2f2;
+$redSq: #f689a8;
+// : #FD0000;
+$maxWidth: 3000;
+$maxWidthContainer: 1700;
+@mixin adaptiv($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    @if $type==1 {
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    }
+    @else if $type==2 {
+        #{$property}: $startSize + px;
+        @media (min-width: #{maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+    }
+    @else {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+}
+
+.container {
+    max-width: 1690px;
+    margin: 0 auto;
+}
+
+@import "_norm.scss";
+@import "_header.scss";
+@import "_stuff.scss";
+@import "_stuffInfo.scss";
+@import "_media.scss";
+@import "_stuff.scss";
+@import "_stuffInfo.scss";
+@import "_media.scss";

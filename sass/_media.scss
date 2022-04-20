@@ -1,0 +1,78 @@
+@media (max-width: 1240px) {
+    .features {
+        &__anomaly,
+        &__main,
+        &__table {
+            padding-left: 20px;
+        }
+    }
+    .category__item {
+        height: 23px !important;
+        &_title {
+            height: 36px !important;
+            white-space: pre-line !important;
+        }
+    }
+    .features__table {
+        padding-right: 16px;
+        column-gap: 10px
+    }
+    .category__item,
+    .discipline__item {
+        padding-right: 4px !important;
+        white-space: pre-wrap;
+    }
+    .searchItem,
+    .statistic__about {
+        .item__info {
+            margin-right: 15px;
+        }
+    }
+    .item__title {
+        font-size: 8px;
+        line-height: 9px;
+    }
+    .anomaly__item {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .ai,
+    .vs,
+    .vb {
+        padding: 10px 19px 8px 19px !important;
+    }
+    .body {
+        &__item:nth-child(2) {
+            @include adaptiv(padding-left, 15, 5, 0);
+            // margin: 0 auto;
+        }
+        &__item:nth-child(3),
+        &__item:nth-child(4) {
+            @include adaptiv(padding-left, 15, 5, 0);
+        }
+    }
+    .item__name_stuff {
+        font-size: 20px !important;
+        line-height: 25px !important;
+    }
+}
+
+@media (max-width: 950px) {
+    .stuffInfo__search {
+        display: none;
+    }
+}
+
+@media (max-width: 1420px) {
+    .short {
+        display: block;
+        position: relative;
+        top: 0;
+        left: -3px;
+        border-color: white;
+        color: $anomalyItemColor;
+    }
+}

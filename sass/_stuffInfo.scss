@@ -1,0 +1,490 @@
+    .stuffInfo {
+        display: flex;
+        &__search {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            flex: 1 1 auto;
+            height: 22px;
+            background-color: $serchFormBackCol;
+            position: relative;
+            max-width: 340px;
+            min-width: 280px;
+            input {
+                background-color: $serchFormBackCol;
+                padding-left: 47.46px;
+                border: 0;
+                width: 100%;
+            }
+            input::placeholder {
+                font-size: 12.95px;
+                color: $placeholderColor;
+            }
+        }
+        form {
+            img {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                top: 7px;
+                left: 25.5px;
+            }
+        }
+    }
+    
+    .searchItem {
+        max-width: 340px;
+        display: flex;
+        padding: 20px 29px 18px 29px;
+        background-color: $searchItemBackColor;
+        opacity: 0.45;
+        align-items: center;
+        .item {
+            &__nonActive {
+                visibility: hidden;
+            }
+            &__active_ai {
+                visibility: visible;
+            }
+            &__photo {
+                width: 50px;
+                height: 50px;
+                margin-right: 12.06px;
+            }
+            &__info {
+                flex: 1 1 auto;
+            }
+            &__name {
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 700;
+                margin-bottom: 4px;
+                display: flex;
+                flex: 1 1 auto;
+                align-items: center;
+                span {
+                    color: $stuffCatalogcolor;
+                    display: inline-block;
+                    margin-right: 6.04px;
+                }
+            }
+            &__prof {
+                color: $itemProfColor;
+                font-size: 10.62px;
+                line-height: 10.62px;
+                white-space: nowrap;
+                flex: 1 1 auto;
+            }
+            &__status {
+                padding: 5px;
+                background-color: $itemStatusColorAlt;
+                display: inline-block;
+                color: white;
+                font-size: 7.85px;
+                line-height: 7.85px;
+                border-radius: 5px;
+                &_vb {
+                    background-color: $itemStatusColor;
+                }
+            }
+            &__mark {
+                text-align: right;
+                font-size: 17.38px;
+                color: $itemMArkAlt;
+                flex: 1 1 auto;
+                font-weight: 600;
+            }
+        }
+    }
+    
+    .searchItem:hover {
+        background-color: white;
+        opacity: 1;
+    }
+    
+    .searchItem:hover>.item__mark {
+        color: $itemMArk;
+    }
+    
+    .stuff {
+        &__statistic {
+            max-width: 1350px;
+            flex: 1 1 auto;
+            border-left: 1px solid $borderStatistic;
+        }
+    }
+    
+    .statistic {
+        &__about {
+            height: 122px;
+            border-bottom: 1px solid $borderStatistic;
+            display: flex;
+            padding: 16px 21px;
+            &_searchItem {
+                max-width: 500px;
+            }
+            .searchItem {
+                align-items: start;
+                padding: 0;
+                background-color: white;
+                position: relative;
+                opacity: 1;
+                height: 30px;
+                .smile {
+                    height: 17px;
+                    width: 17px;
+                    position: absolute;
+                    top: 42px;
+                    left: 42px;
+                    background-color: white;
+                    border-radius: 50%;
+                    svg {
+                        position: absolute;
+                    }
+                }
+            }
+            .item {
+                &__photo {
+                    width: 58px;
+                    height: 58px;
+                    margin-right: 14px;
+                    flex: 0 0 auto;
+                }
+                &__info {
+                    flex: 1 1 auto;
+                    margin-right: 59px;
+                }
+                &__name {
+                    flex: 1 1 auto;
+                    font-size: 25px;
+                    line-height: 34px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        color: black;
+                        display: inline-block;
+                        margin-right: 6.04px;
+                        position: relative;
+                        display: inline-block;
+                        .item__active {
+                            svg {
+                                visibility: visible;
+                                position: absolute;
+                                top: -1px;
+                                left: 104%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .about {
+        &__features {
+            display: flex;
+            flex: 1 1;
+            flex-direction: column;
+        }
+        &__activity {
+            color: $itemProfColor;
+            font-size: 11.68px;
+            line-height: 11.68px;
+            span {
+                color: $anomalyItemColor;
+            }
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            a {
+                font-size: 10.28px;
+                line-height: 10.28px;
+                color: $stuffCatalogcolor;
+            }
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
+                color: $stuffCatalogcolor;
+                white-space: nowrap;
+            }
+        }
+        &__body {
+            flex: 0 1;
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            margin-top: 25.31px;
+        }
+    }
+    
+    .body {
+        &__item {
+            svg:hover .fi11 {
+                fill: black;
+            }
+            white-space: nowrap;
+            flex: 1 1 auto;
+            padding-right: 10px;
+        }
+        &__item+&__item {
+            border-left: 1px solid $borderBodyItemColor;
+        }
+        &__item:nth-child(2) {
+            padding-left: 40.5px;
+        }
+        &__item:nth-child(3) {
+            padding-left: 43px;
+        }
+        &__item:nth-child(4) {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            svg+svg {
+                margin-left: 12.02px;
+            }
+        }
+    }
+    
+    .item {
+        &_value {
+            color: black;
+            font-size: 17.72px;
+            font-weight: 600;
+            .rotate__arrow {
+                display: block;
+                transform-origin: 50% 50%;
+                transform: rotate(180deg);
+            }
+            span {
+                font-size: 9.54px;
+                position: relative;
+                font-weight: 400;
+                .rotate__arrow {
+                    transform-origin: 50% 50%;
+                    transform: rotate(180 deg);
+                }
+                img {
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
+                }
+            }
+            .badValue {
+                color: $itemMArk;
+            }
+        }
+        &__title {
+            font-size: 12.4px;
+            color: $itemProfColor;
+            font-weight: 600;
+        }
+    }
+    
+    .anomaly {
+        &__title {
+            margin-bottom: 19.32px;
+        }
+        &__items {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            border: 1px solid $itemMArk;
+            border-radius: 2px;
+            display: block;
+            max-width: 404px;
+            flex: 1 1 33.3%;
+            height: 74px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0 11.5px 0 11.5px;
+            font-size: 12.95px;
+            color: $anomalyItemColor;
+            img {
+                display: inline-block;
+                margin-right: 14.12px;
+            }
+        }
+        &__item+&__item {
+            margin-left: 21px;
+        }
+    }
+    
+    h2 {
+        color: $h2Color;
+        font-size: 11.78px;
+        line-height: 11.78px;
+        text-transform: uppercase;
+        font-family: "Open Sans", serif;
+        font-weight: 400;
+        display: block;
+    }
+    
+    .features {
+        &__anomaly {
+            padding: 33.4px 038.5px 73.2px 38.5px;
+            font-size: 12.95px;
+            line-height: 12.95px;
+            color: $AnomalyFColor;
+        }
+        &__main {
+            padding: 0 0 0 38px;
+        }
+        &__table {
+            padding: 26.7px 55px 41.1px 38px;
+            max-width: 1350px;
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            @include adaptiv(column-gap, 40, 10, 0);
+            h2 {
+                margin-bottom: 26.53px;
+            }
+            .item {
+                &__app,
+                &__site {
+                    white-space: nowrap;
+                }
+                &__appCategory,
+                &__siteCategory {
+                    height: 24.7px;
+                    display: grid;
+                    align-items: center;
+                    grid-template-rows: auto auto auto auto;
+                    align-items: center;
+                    grid-template-columns: minmax(80px, 250px) auto auto auto;
+                    .category__item {
+                        color: $anomalyItemColor;
+                        height: 24.7px;
+                        font-size: 9.61px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        white-space: nowrap;
+                        border-bottom: 1px solid $borderTableColor;
+                        @include adaptiv(padding-right, 30, 10, 0);
+                        &_noPadding {
+                            padding-right: 0;
+                        }
+                        &_flexStart {
+                            justify-content: flex-start;
+                            overflow: hidden;
+                        }
+                        &_title {
+                            font-size: 11.4px;
+                            color: $titleCatColor;
+                            font-weight: 500;
+                        }
+                        &_time {
+                            text-align: right;
+                            color: $stuffCatalogcolor;
+                        }
+                    }
+                    .name {
+                        &__value {
+                            justify-content: flex-start;
+                        }
+                    }
+                    .sq {
+                        flex: 0 0 10px;
+                        height: 10px;
+                        width: 10px;
+                        margin-right: 10px;
+                        border-bottom: none;
+                    }
+                    .redSq {
+                        background-color: $redSq;
+                        display: inline-block;
+                    }
+                    .yellowSq {
+                        background-color: $yelloSq;
+                        display: inline-block;
+                    }
+                    .greenSq {
+                        display: inline-block;
+                        background-color: $greenSq;
+                    }
+                }
+                &__checkDiscipline {
+                    display: grid;
+                    max-width: 350px;
+                    grid-template-columns: auto auto auto auto;
+                    grid-template-rows: auto auto auto auto;
+                    .discipline {
+                        &__item {
+                            @include adaptiv(padding-right, 20, 3, 0);
+                            border-bottom: 1px solid $borderTableColor;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            white-space: nowrap;
+                            font-size: 9.61px;
+                            color: $anomalyItemColor;
+                            font-weight: 500;
+                            flex: 0 0;
+                            height: 24px;
+                            span {
+                                display: block;
+                                font-size: 7.34px;
+                            }
+                            .span {
+                                &_green {
+                                    color: $disciplineColorGreen;
+                                }
+                                &_red {
+                                    color: $itemMArk;
+                                }
+                            }
+                            &_title {
+                                white-space: normal;
+                                text-align: center;
+                                font-size: 11.84px;
+                                color: $titleCatColor;
+                                border-bottom: 0px;
+                                margin-bottom: 8px;
+                            }
+                            &_noPadding {
+                                padding-right: 0;
+                                justify-content: flex-end;
+                            }
+                            &_paddingData {
+                                @include adaptiv(padding-right, 53.12, 5, 0);
+                            }
+                            .item__flex {
+                                @include adaptiv(width, 65, 60, 0);
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .main {
+        &__title {
+            margin-bottom: 11.52px;
+        }
+        &__body {
+            height: 195px;
+            background-color: $bodyBackColor;
+            margin-right: 20px;
+            font-size: 18px;
+            color: $textBodyColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    .short {
+        display: none;
+    }
